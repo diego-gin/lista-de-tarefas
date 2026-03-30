@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de tarefas</title>
+</head>
+<body>
+    <div class="frame">
+
+        <div class="titulo">
+
+            <h2>Lista de Tarefas</h2>
+
+            <div class="k-titulo">
+
+                <h2>할 일 목록</h2>
+            </div>
+        </div>
+
+        <div class="form-box">        
+            
+                <input type="text" class="input-form" id="inputTitulo" placeholder="Insira o título">
+                <input type="text" class="input-form" id="inputDescricao" placeholder="Insira a descrição">
+
+                <select class="select" id="setPrioridade">
+                    <option value="">Prioridade</option>
+                    <option value="baixa">Baixa</option>
+                    <option value="media">Média</option>
+                    <option value="alta">Alta</option>
+                </select>
+
+                <input type="hidden" id="index" value="">
+
+            <span onclick="submeterTarefa()" class="btn" id="botaoAdicionar">Adicionar</span>
+        </div>
+
+        <div class="barra-busca">
+
+            <input type="text" id="campoBusca" placeholder="Buscar por título">
+        </div>
+
+        <ul id="minhaLista"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
