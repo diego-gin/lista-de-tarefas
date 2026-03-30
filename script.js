@@ -36,7 +36,7 @@ function listarTarefas(lista = tarefas) {
             <span class="primaria">${tarefa.titulo}</span>
             ${tarefa.descricao ? `<span class="descricao">${tarefa.descricao}</span>` : ""}
             <div class="tarefa-rodape">
-                ${tarefa.data       ? `<span class="data">Criado em ${tarefa.data}</span>` : ""}
+                ${tarefa.data ? `<span class="data">Criado em ${tarefa.data}</span>` : ""}
                 ${tarefa.prioridade ? `<span class="prioridade prioridade-${tarefa.prioridade}">${capitalizar(tarefa.prioridade)}</span>` : ""}
             </div>
             <div class="grupo-acoes">
@@ -67,7 +67,7 @@ function submeterTarefa() {
     const prioridade = document.getElementById("setPrioridade").value;
     const indice = document.getElementById("index").value;
 
-    if (!titulo) { alert("Você precisa escrever um título!"); return; }
+    if (!titulo) { alert("Escreva um título"); return; }
 
     if (indice === "") {
         const data = new Date().toLocaleString("pt-BR", {
